@@ -34,7 +34,7 @@
                                         {{-- @php
                                             $profileImage = \App\User::find($allUser->id)->profile;
                                         @endphp --}}
-                                            <div class="col-md-12">
+                                            {{-- <div class="col-md-12"> --}}
                                                 <div class="box-card">
                                                     <div class="card-footer">
                                                         <div class="profile-result">

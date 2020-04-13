@@ -55,7 +55,7 @@
                                     @endphp
                                     @if ($tweet-> user_id == Auth::user()->id)
                                         <div class="row">
-                                            <div class = "col-md-2">
+                                            <div class = "col-md-3">
                                                 @isset($profileImage)
                                                     <a  class = "text-center" href="/profile/{{$tweet->user->id}}"><img class="img-fluid rounded mx-auto d-block" src="{{asset('/storage/'.$profileImage->profile_pic)}}" style="border-radius:50%;height:75px;width:75px;" alt="Image"></a><br>
                                                 @endisset
@@ -64,7 +64,7 @@
                                                 @endempty
                                                 <a  class = "text-center" href="/profile/{{$tweet->user->id}}"><p><strong>{{$tweet->user->name}}</strong></p></a>
                                             </div>
-                                            <div class = "col-md-10">
+                                            <div class = "col-md-9">
                                                 <p>{{substr($tweet-> content,0,150)}}</p>
                                                 <p class = "time"><i>Posted: {{$tweet-> created_at->diffForHumans()}}</i></p>
                                                 <p class = "time"><i>Updated: {{$tweet-> updated_at->diffForHumans()}}</i></p>
@@ -89,7 +89,7 @@
                                         </div>
                                     @else
                                         <div class="row">
-                                            <div class = "col-md-2">
+                                            <div class = "col-md-3">
                                                 @isset($profileImage)
                                                     <a class = "text-center" href="/profile/{{$tweet->user->id}}"><img class="img-fluid rounded mx-auto d-block" src="{{asset('/storage/'.$profileImage->profile_pic)}}" style="border-radius:50%;height:75px;width:75px;" alt="Image"></a><br>
                                                 @endisset
@@ -98,7 +98,7 @@
                                                 @endempty
                                                 <a class = "text-center" href="/profile/{{$tweet->user->id}}"><p><strong>{{$tweet-> user->name}}</strong></p></a>
                                             </div>
-                                            <div class = "col-md-10">
+                                            <div class = "col-md-9">
                                                 <p>{{substr($tweet-> content,0,150)}}</p>
                                                 <p class = "time"><i>Posted: {{$tweet-> created_at->diffForHumans()}}</i></p>
                                                 <p class = "time"><i>Updated: {{$tweet-> updated_at->diffForHumans()}}</i></p>
