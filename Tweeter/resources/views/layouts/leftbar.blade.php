@@ -10,7 +10,7 @@
                 $followersCount = count(\App\Follow::where('followed','=', Auth::user()->id)->get());
             @endphp
             @isset($profileI)
-                <a href="/profile/{{Auth::user()->id}}"><img class="img-fluid rounded mx-auto d-block" src="{{asset('/storage/'.$profileI->profile_pic)}}" style="border-radius:50%;height:75px;width:75px;" alt="Image"></a>
+                <a href="/profile/{{Auth::user()->id}}"><img class="img-fluid rounded mx-auto d-block" src="/storage/{{$profileI->profile_pic}}" style="border-radius:50%;height:75px;width:75px;" alt="Image"></a>
                 <br>
                 <a href="/profile/{{Auth::user()->id}}"><h2 class = "text-center">{{Auth::user()->name}}</h2></a>
                 <b>Gender :</b> {{$profileI->gender}} <br>

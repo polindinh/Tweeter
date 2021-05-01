@@ -31,10 +31,10 @@
                                 <div class="row">
                                     <div class = "col-md-2">
                                         @isset($profileImage)
-                                            <a  class = "text-center" href="/profile/{{$tweets->user->id}}"><img class="img-fluid rounded mx-auto d-block" src="{{asset('/storage/'.$profileImage->profile_pic)}}" style="border-radius:50%;height:75px;width:75px;" alt="Image"></a><br>
+                                            <a  class = "text-center" href="/profile/{{$tweets->user->id}}"><img class="img-fluid rounded mx-auto d-block" src="/storage/{{$profileImage->profile_pic}}" style="border-radius:50%;height:75px;width:75px;" alt="Image"></a><br>
                                         @endisset
                                         @empty($profileImage)
-                                            <a  class = "text-center" href="/profile/{{$tweets->user->id}}"><img class="img-fluid rounded mx-auto d-block" src="{{asset('/storage/profile_images/noimage.jpg/')}}" style="border-radius:50%;height:75px;width:75px;" alt="Image"></a><br>
+                                            <a  class = "text-center" href="/profile/{{$tweets->user->id}}"><img class="img-fluid rounded mx-auto d-block" src="/storage/profile_images/noimage.jpg" style="border-radius:50%;height:75px;width:75px;" alt="Image"></a><br>
                                         @endempty
                                         <a  class = "text-center" href="/profile/{{$tweets->user->id}}"><p><strong>{{$tweets->user->name}}</strong></p></a>
                                     </div>

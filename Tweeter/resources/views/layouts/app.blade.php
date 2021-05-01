@@ -10,7 +10,7 @@
     <title>Tweeter</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="js/app.js" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -20,14 +20,17 @@
 
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm ps sticky-top ">
 
             <div class="container">
-                    <a  href="{{ url('/home') }}"><img src="{{asset('/storage/profile_images/Logo.png/')}}" style="width:60px; height:50px;" alt="Image"></a>
+                    <a  href="/home"><img src="/storage/profile_images/Logo.png" style="width:60px; height:50px;" alt="Image"></a>
+                    {{-- <a  href="/home"><img src="/storage/profile_images/Logo.png/" style="width:60px; height:50px;" alt="Image"></a> --}}
+
+
 
                 {{-- <a class="navbar-brand" href="{{ url('/home') }}" style="color:#1DA1F2">
                     TWEETER
